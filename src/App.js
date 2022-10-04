@@ -1,10 +1,10 @@
-
 import './App.css';
+import RandomNumberComponent from "./components/RandomNumperComponent";
 
 function App() {
   return (
     <div className="App">
-      <h1>test</h1>
+        <RandomNumberComponent maxNumber="2"/>
     </div>
   );
 }

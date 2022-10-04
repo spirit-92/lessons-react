@@ -1,0 +1,28 @@
+h1{
+    color: red;
+    margin-bottom: 10px;
+}
+.container{
+    display: flex;
+    max-width: 200px;
+    text-align: center;
+    flex-direction: column;
+    margin: 15px auto auto;
+
+}
+.container button {
+    transition: .7s;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 15px;
+    color: white;
+    background: gray;
+}
+.container button:hover{
+    transform: scale(1.01);
+    background: transparent;
+    color: gray;
+    border: 1px solid black;
+}
