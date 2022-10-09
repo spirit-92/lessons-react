@@ -1,0 +1,18 @@
+.resetBtn button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+
+}
+.resetBtn {
+    display: flex;
+    justify-content: center;
+}

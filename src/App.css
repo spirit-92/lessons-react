@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: gray;
+    align-items: center;
+}
+
+.App {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*grid-template-rows: 1fr 1fr;*/
+    gap: 10px 10px;
+    grid-template-areas:
+    "head head head"
+    "first1 second three";
+    margin-top: 15px;
+    /*min-height: 120px;*/
+
+
+}
+
+
+.App > h1 {
+    grid-area: head;
+    text-align: center
+}
+.App>div>button{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    cursor: pointer;
+}
+.btn1 button{background: red}
+.btn2 button{background: green}
+.btn3 button{background: yellow}
+
+.btn1 {
+    grid-area: first1;
+}
+
+.btn2 {
+    grid-area: second;
+}
+
+.btn3 {
+    grid-area: three;
+}
+
+
+
+button {
+    border: none;
+    background: white;
+
+    padding: 0.5rem 1rem;
+}
+
+button:not(:last-child) {
+    /*margin-right: 10px;*/
+}
+
+@media (max-width: 1275px) {
+    .App {
+
+        grid-template-areas:
+    "head head head"
+    "three three three"
+    "first1 first1 first1"
+    "second second second";
+
+    }
+    .App>button:nth-child(1)  {background: red }
+}
