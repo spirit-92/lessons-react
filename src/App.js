@@ -1,10 +1,12 @@
 
 import './App.css';
+import PostsComponent from "./components/Posts/PostsComponent";
+
 
 function App() {
   return (
     <div className="App">
-      <h1>test</h1>
+        <PostsComponent />
     </div>
   );
 }

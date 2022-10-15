@@ -1,0 +1,18 @@
+.li_post{
+    /*max-width: 200px;*/
+}
+.header_post h3 {
+    text-align: center;
+    text-transform: uppercase;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+-webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.body_post p{
+    margin-top: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
