@@ -1,0 +1,21 @@
+.btn{
+    background: red;
+}
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    background: aqua;
+    border: 2px solid black;
+}
+.h1Test{
+    font-family: cursive;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: chocolate;
+}
+.pTest{
+    font-family: 'Ubuntu', serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: slateblue;
+}
