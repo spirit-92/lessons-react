@@ -5,14 +5,15 @@ import {faCoffee ,faCheckCircle } from '@fortawesome/fontawesome-free-solid'
 import {GenerateTodo,Todo} from "./components/todo/generateClassTodo/Todo";
 import {useState} from "react";
 
+
 function App() {
   let todos = new Todo('My todo')
-  const [todo,changeTodo] = useState('')
 
+  const [loading, setPost] = useState(true)
 
-  console.log(todo)
-  changeTodo('sd')
-  console.log(todo)
+  console.log(loading)
+  setPost(false)
+  console.log(loading)
   return (
     <div className="container">
       <h1>test</h1>
