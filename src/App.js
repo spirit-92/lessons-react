@@ -1,27 +1,48 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCoffee ,faCheckCircle } from '@fortawesome/fontawesome-free-solid'
-import {GenerateTodo,Todo} from "./components/todo/generateClassTodo/Todo";
+
+import {GenerateTodo, Todo} from "./components/todo/generateClassTodo/Todo";
+
+import AddTodo from "./components/todo/add-todo-form/AddTodo";
+import UlTodo from "./components/todo/todos-ul/UlTodo";
 import {useState} from "react";
+import ButtonsTodo from "./components/todo/buttons-todo/Buttons-todo";
 
 
 function App() {
-  let todos = new Todo('My todo')
+    const [todo, setTodo] = useState(new Todo('My todo').todos)
 
-  const [loading, setPost] = useState(true)
+    function addTodo(text) {
+        setTodo(oldArray => [...oldArray, new GenerateTodo(false, text)]);
+    }
 
-  console.log(loading)
-  setPost(false)
-  console.log(loading)
-  return (
-    <div className="container">
-      <h1>test</h1>
-        <FontAwesomeIcon icon={faCoffee} />
-        <FontAwesomeIcon icon={faCheckCircle} />
-        <button className="btn btn-primary">sd</button>
-    </div>
-  );
+    function deleteItemHandler() {
+        setTodo(todo.filter(item => item.id !== +this));
+    }
+
+    function changeStatusTodoHandler(){
+        setTodo(todo.map(todo => {
+            if (todo.id === this){
+                todo.state = !todo.state
+            }
+            return todo
+        }));
+    }
+
+    function trashAllTasksHandler(){
+        this?  setTodo(todo.filter(item => item.state)):setTodo(todo.filter(item => !item.state))
+    }
+
+
+    return (
+        <div className="container mt-5">
+            <h1 className='text-center'>Todos</h1>
+            <AddTodo addTodo={addTodo}></AddTodo>
+
+            <ButtonsTodo list={todo}  trashAllTasks = {trashAllTasksHandler} />
+            <UlTodo list={todo} setArr={setTodo} deleteItem = {deleteItemHandler} changeStatusTodo={changeStatusTodoHandler} />
+        </div>
+    );
 }
 
 export default App;

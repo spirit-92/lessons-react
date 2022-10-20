@@ -13,8 +13,10 @@ export class Todo {
 export class GenerateTodo {
     state;
     name;
+    id;
     constructor(state,name) {
         this.state = state
         this.name = name
+        this.id = Date.now()+Math.floor(Math.random() * 100)
     }
 }

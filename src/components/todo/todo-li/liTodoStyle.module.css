@@ -1,0 +1,12 @@
+
+.fun_li i{
+    transition: .5s;
+}
+.fun_li i:hover{
+    color: red;
+    transform: scale(1.3);
+}
+.listTodo{
+    border: none;
+    width: 100%;
+}
